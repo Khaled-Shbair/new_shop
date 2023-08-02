@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../core/resources/manage_routes.dart';
+import 'features/splash/presentation/view/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +15,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-
+      initialRoute: ManageRoutes.splashScreen,
+      routes: {
+        ManageRoutes.splashScreen: (context) => const SplashScreen(),
+      },
     );
   }
 }
