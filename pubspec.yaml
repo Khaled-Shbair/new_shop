@@ -25,13 +25,16 @@ flutter:
   uses-material-design: true
 
   assets:
+    - assets/images/
     - assets/images/splash/
+    - assets/images/onboarding/
+    - assets/images/auth/
 
 
   # fonts:
-  #   - family: Schyler
+  #   - family: None
   #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  #       - asset: fonts/None-Regular.ttf
+  #       - asset: fonts/None-Italic.ttf
   #         style: italic
   #         weight: 700
