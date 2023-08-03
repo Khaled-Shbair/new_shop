@@ -1,5 +1,5 @@
-import '../../core/resources/manage_routes.dart';
-import '../../core/constants.dart';
+import '../../../core/resources/manage_routes.dart';
+import '../../../core/constants.dart';
 import 'package:get/get.dart';
 
 class SplashScreenGetX extends GetxController {

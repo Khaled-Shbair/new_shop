@@ -4,5 +4,6 @@ class ManageWidth {
   static const double w26 = 26;
   static const double w12 = 12;
   static const double w260 = 260;
+  static const double w86 = 86;
   static const double w110 = 110;
 }

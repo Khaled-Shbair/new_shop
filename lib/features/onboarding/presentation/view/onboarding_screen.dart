@@ -11,7 +11,7 @@ import '../widgets/page_view_contents.dart';
 import '../../../../core/constants.dart';
 import '../widgets/page_indicator.dart';
 import 'package:flutter/material.dart';
-import '../../onboarding_getx.dart';
+import '../../controller/onboarding_getx.dart';
 import 'package:get/get.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -118,6 +118,8 @@ class OnboardingScreen extends StatelessWidget {
                   },
                   start: ManageWidth.w26,
                   end: ManageWidth.w26,
+                  text: 'start'.tr,
+                  isRow: true,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
