@@ -1,4 +1,5 @@
 import '../features/onboarding/controller/onboarding_getx.dart';
+import '../features/auth/controller/change_password_getx.dart';
 import '../features/auth/controller/forget_password_getx.dart';
 import '../features/splash/controller/splash_screen_getx.dart';
 import '../features/auth/controller/sign_in_getx.dart';
@@ -13,5 +14,6 @@ class Binding extends Bindings {
     Get.lazyPut(() => SignUpGetX());
     Get.lazyPut(() => SignInGetX());
     Get.lazyPut(() => ForgetPasswordGetX());
+    Get.lazyPut(() => ChangePasswordGetX());
   }
 }

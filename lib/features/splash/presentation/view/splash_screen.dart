@@ -1,4 +1,5 @@
 import '../../../../core/resources/manage_assets.dart';
+import '../../../../core/resources/manage_colors.dart';
 import '../../../../core/widgets/my_image_logo.dart';
 import '../../controller/splash_screen_getx.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -11,6 +12,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SplashScreenGetX.to;
     return Scaffold(
+      backgroundColor: ManageColors.white,
       body: Stack(
         alignment: AlignmentDirectional.center,
         children: [

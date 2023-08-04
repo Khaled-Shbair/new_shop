@@ -18,7 +18,7 @@ class IconHidePassword extends StatelessWidget {
       onPressed: onPressed,
       icon: Icon(
         !status ? Icons.visibility : Icons.visibility_off,
-        color: ManageColors.c5,
+        color: ManageColors.c3,
       ),
     );
   }

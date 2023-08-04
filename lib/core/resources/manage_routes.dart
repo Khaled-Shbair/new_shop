@@ -5,4 +5,5 @@ class ManageRoutes {
   static const String signUpScreen = '/signUpScreen';
   static const String signInScreen = '/signInScreen';
   static const String forgotPasswordScreen = '/forgotPasswordScreen';
+  static const String changePasswordScreen = '/changePasswordScreen';
 }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'core/binding.dart';
+import 'core/resources/manage_colors.dart';
+import 'features/auth/presentation/view/change_password_screen.dart';
 import 'languages/translation.dart';
 
 //
@@ -28,9 +30,13 @@ class MyApp extends StatelessWidget {
       fallbackLocale: const Locale('en'),
       theme: ThemeData(
         useMaterial3: true,
+        scaffoldBackgroundColor: ManageColors.c4,
+        appBarTheme: const AppBarTheme(
+          centerTitle: true,
+        ),
       ),
       initialBinding: Binding(),
-      initialRoute: ManageRoutes.splashScreen,
+      initialRoute: ManageRoutes.changePasswordScreen,
       routes: {
         ManageRoutes.splashScreen: (context) => const SplashScreen(),
         ManageRoutes.onboardingScreen: (context) => const OnboardingScreen(),
@@ -39,6 +45,8 @@ class MyApp extends StatelessWidget {
         ManageRoutes.signUpScreen: (context) => const SignUpScreen(),
         ManageRoutes.forgotPasswordScreen: (context) =>
             const ForgetPasswordScreen(),
+        ManageRoutes.changePasswordScreen: (context) =>
+            const ChangePasswordScreen(),
       },
     );
   }

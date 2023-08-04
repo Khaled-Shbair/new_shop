@@ -25,7 +25,7 @@ class MyRichText extends StatelessWidget {
           TextSpan(
             text: textQuestion,
             style: const TextStyle(
-              color: ManageColors.c1,
+              color: ManageColors.secondaryColor,
               fontSize: ManageFontsSizes.s16,
               fontWeight: ManageFontsWeights.w400,
             ),

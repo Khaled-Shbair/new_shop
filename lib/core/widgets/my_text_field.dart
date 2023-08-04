@@ -38,7 +38,7 @@ class MyTextField extends StatelessWidget {
         cursorColor: ManageColors.primaryColor,
         obscureText: obscureText,
         style: const TextStyle(
-          color: ManageColors.c1,
+          color: ManageColors.secondaryColor,
           fontSize: ManageFontsSizes.s16,
           fontWeight: ManageFontsWeights.w400,
         ),
@@ -60,7 +60,7 @@ class MyTextField extends StatelessWidget {
             ),
           ),
           labelStyle: const TextStyle(
-            color: ManageColors.c4,
+            color: ManageColors.c2,
             fontSize: ManageFontsSizes.s16,
             fontWeight: ManageFontsWeights.w400,
           ),

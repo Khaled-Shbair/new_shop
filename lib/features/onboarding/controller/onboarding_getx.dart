@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../core/constants.dart';
+
 class OnboardingGetX extends GetxController {
   static OnboardingGetX get to => Get.find();
   late PageController _pageController;
@@ -22,5 +24,21 @@ class OnboardingGetX extends GetxController {
   void dispose() {
     _pageController.dispose();
     super.dispose();
+  }
+
+  void previousPage() {
+    pageController!.previousPage(
+      duration: const Duration(
+        seconds: Constants.durationToReturnToPreviousPageInOnboardingScreen,
+      ),
+      curve: Curves.easeInOut,
+    );
+  }
+
+  bool currentPage(int page) {
+    if (_currentPageIndex.value == page) {
+      return true;
+    }
+    return false;
   }
 }

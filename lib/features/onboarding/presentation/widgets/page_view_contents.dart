@@ -31,7 +31,7 @@ class PageViewContents extends StatelessWidget {
           title,
           style: const TextStyle(
             fontSize: ManageFontsSizes.s26,
-            color: ManageColors.c1,
+            color: ManageColors.secondaryColor,
             fontWeight: ManageFontsWeights.w700,
           ),
         ),
@@ -43,7 +43,7 @@ class PageViewContents extends StatelessWidget {
             subTitle,
             style: const TextStyle(
               fontSize: ManageFontsSizes.s18,
-              color: ManageColors.c1,
+              color: ManageColors.secondaryColor,
               fontWeight: ManageFontsWeights.w400,
             ),
           ),

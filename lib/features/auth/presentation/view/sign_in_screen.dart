@@ -22,6 +22,8 @@ class SignInScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ManageColors.white,
+
       appBar: AppBar(),
       body: GetX<SignInGetX>(
         init: SignInGetX.to,
@@ -39,7 +41,7 @@ class SignInScreen extends StatelessWidget {
               Text(
                 'sign_in'.tr.toUpperCase(),
                 style: const TextStyle(
-                  color: ManageColors.c1,
+                  color: ManageColors.secondaryColor,
                   fontWeight: ManageFontsWeights.w700,
                   fontSize: ManageFontsSizes.s32,
                 ),
@@ -80,7 +82,7 @@ class SignInScreen extends StatelessWidget {
                 title: Text(
                   'remember_me'.tr,
                   style: const TextStyle(
-                    color: ManageColors.c1,
+                    color: ManageColors.secondaryColor,
                     fontSize: ManageFontsSizes.s14,
                     fontWeight: ManageFontsWeights.w400,
                   ),

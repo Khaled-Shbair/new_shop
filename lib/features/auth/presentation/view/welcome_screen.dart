@@ -16,6 +16,7 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ManageColors.white,
       body: Stack(
         alignment: AlignmentDirectional.center,
         children: [
