@@ -1,17 +1,15 @@
-import '../../../../core/resources/manage_fonts_weights.dart';
 import '../../../../core/resources/manage_icons_sizes.dart';
-import '../../../../core/resources/manage_fonts_sizes.dart';
 import '../../../../core/resources/manage_heights.dart';
 import '../../../../core/resources/manage_assets.dart';
 import '../../../../core/resources/manage_colors.dart';
 import '../../../../core/resources/manage_routes.dart';
 import '../../../../core/resources/manage_widths.dart';
 import '../../../../core/widgets/my_button.dart';
+import '../../controller/onboarding_getx.dart';
 import '../widgets/page_view_contents.dart';
 import '../../../../core/constants.dart';
 import '../widgets/page_indicator.dart';
 import 'package:flutter/material.dart';
-import '../../onboarding_getx.dart';
 import 'package:get/get.dart';
 
 class OnboardingScreen extends StatelessWidget {
@@ -23,24 +21,17 @@ class OnboardingScreen extends StatelessWidget {
       init: OnboardingGetX.to,
       builder: (controller) {
         return Scaffold(
+          backgroundColor: ManageColors.white,
           appBar: AppBar(
             elevation: Constants.elevationAppBar,
             backgroundColor: ManageColors.transparent,
             leading: Visibility(
-              visible: controller.currentPageIndex != 0,
+              visible: !controller.currentPage(0),
               child: IconButton(
-                onPressed: () {
-                  controller.pageController!.previousPage(
-                    duration: const Duration(
-                      seconds: Constants
-                          .durationToReturnToPreviousPageInOnboardingScreen,
-                    ),
-                    curve: Curves.easeInOut,
-                  );
-                },
+                onPressed: controller.previousPage,
                 icon: const Icon(
                   Icons.arrow_back,
-                  color: ManageColors.c1,
+                  color: ManageColors.secondaryColor,
                   size: ManageIconsSizes.s28,
                 ),
               ),
@@ -89,24 +80,24 @@ class OnboardingScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     PageIndicator(
-                      color: controller.currentPageIndex == 0
-                          ? ManageColors.c1
-                          : ManageColors.c2,
+                      color: controller.currentPage(0)
+                          ? ManageColors.secondaryColor
+                          : ManageColors.c1,
                     ),
                     PageIndicator(
-                      color: controller.currentPageIndex == 1
-                          ? ManageColors.c1
-                          : ManageColors.c2,
+                      color: controller.currentPage(1)
+                          ? ManageColors.secondaryColor
+                          : ManageColors.c1,
                     ),
                     PageIndicator(
-                      color: controller.currentPageIndex == 2
-                          ? ManageColors.c1
-                          : ManageColors.c2,
+                      color: controller.currentPage(2)
+                          ? ManageColors.secondaryColor
+                          : ManageColors.c1,
                     ),
                     PageIndicator(
-                      color: controller.currentPageIndex == 3
-                          ? ManageColors.c1
-                          : ManageColors.c2,
+                      color: controller.currentPage(3)
+                          ? ManageColors.secondaryColor
+                          : ManageColors.c1,
                     ),
                   ],
                 ),
@@ -118,26 +109,9 @@ class OnboardingScreen extends StatelessWidget {
                   },
                   start: ManageWidth.w26,
                   end: ManageWidth.w26,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Expanded(
-                        child: Text(
-                          'start'.tr,
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            color: ManageColors.white,
-                            fontSize: ManageFontsSizes.s16,
-                            fontWeight: ManageFontsWeights.w400,
-                          ),
-                        ),
-                      ),
-                      const Icon(
-                        Icons.arrow_forward,
-                        color: ManageColors.white,
-                      ),
-                    ],
-                  ),
+                  text: 'start'.tr,
+                  iconRow: Icons.arrow_forward,
+                  isRow: true,
                 ),
               ],
             ),

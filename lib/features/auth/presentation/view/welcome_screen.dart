@@ -16,6 +16,7 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: ManageColors.white,
       body: Stack(
         alignment: AlignmentDirectional.center,
         children: [
@@ -29,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
             width: ManageWidth.infinity,
             height: ManageHeights.infinity,
             decoration: BoxDecoration(
-              color: ManageColors.blackWithOpacity,
+              color: ManageColors.blackWithOpacity70,
             ),
           ),
           Column(
@@ -61,48 +62,28 @@ class WelcomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: ManageHeights.h120),
               MyButton(
+                text: 'sign_up'.tr,
                 onPressed: () {
                   Get.toNamed(ManageRoutes.signUpScreen);
                 },
-                child: Text(
-                  'sign_up'.tr,
-                  style: const TextStyle(
-                    fontSize: ManageFontsSizes.s16,
-                    fontWeight: ManageFontsWeights.w400,
-                    color: ManageColors.white,
-                  ),
-                ),
               ),
               MyButton(
+                top: ManageHeights.h20,
+                color: ManageColors.white,
+                text: 'sign_in'.tr,
+                colorText: ManageColors.primaryColor,
                 onPressed: () {
                   Get.toNamed(ManageRoutes.signInScreen);
                 },
-                top: ManageHeights.h20,
-                color: ManageColors.white,
-                child: Text(
-                  'sign_in'.tr,
-                  style: const TextStyle(
-                    fontSize: ManageFontsSizes.s16,
-                    fontWeight: ManageFontsWeights.w400,
-                    color: ManageColors.c3,
-                  ),
-                ),
               ),
               MyButton(
+                text: 'visitor'.tr,
+                top: ManageHeights.h20,
+                bottom: ManageHeights.h44,
+                color: ManageColors.whiteWithOpacity50,
                 onPressed: () {
                   //TODO:Later
                 },
-                top: ManageHeights.h20,
-                bottom: ManageHeights.h44,
-                color: ManageColors.whiteWithOpacity,
-                child: Text(
-                  'visitor'.tr,
-                  style: const TextStyle(
-                    fontSize: ManageFontsSizes.s16,
-                    fontWeight: ManageFontsWeights.w400,
-                    color: ManageColors.white,
-                  ),
-                ),
               ),
             ],
           ),
