@@ -1,7 +1,4 @@
-import '../../../../core/resources/manage_fonts_weights.dart';
-import '../../../../core/resources/manage_fonts_sizes.dart';
 import '../../../../core/resources/manage_heights.dart';
-import '../../../../core/resources/manage_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -29,11 +26,7 @@ class PageViewContents extends StatelessWidget {
         const SizedBox(height: ManageHeights.h90),
         Text(
           title,
-          style: const TextStyle(
-            fontSize: ManageFontsSizes.s26,
-            color: ManageColors.secondaryColor,
-            fontWeight: ManageFontsWeights.w700,
-          ),
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         const SizedBox(height: ManageHeights.h44),
         SizedBox(
@@ -41,11 +34,7 @@ class PageViewContents extends StatelessWidget {
           child: Text(
             textAlign: TextAlign.center,
             subTitle,
-            style: const TextStyle(
-              fontSize: ManageFontsSizes.s18,
-              color: ManageColors.secondaryColor,
-              fontWeight: ManageFontsWeights.w400,
-            ),
+            style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
       ],

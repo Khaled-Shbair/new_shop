@@ -37,4 +37,17 @@ const Map<String, String> en = {
   'old_password': 'Old Password',
   'new_password': 'New Password',
   'confirm_new_password': 'Confirm New Password',
+
+  //Home screens
+  'home': 'Home',
+  'fruits_vegetables': 'Fruits & Vegetables',
+  'meats': 'Meats',
+  'clothes': 'Clothes',
+  'electronics': 'Electronics',
+  'best_items': 'Best Items',
+  'show_more': 'Show More',
+  'features': 'Features',
+  'popular': 'Popular',
+  'search': 'Search',
+  'discount': 'Discount',
 };

@@ -1,5 +1,3 @@
-import '../../../../core/resources/manage_fonts_weights.dart';
-import '../../../../core/resources/manage_fonts_sizes.dart';
 import '../../../../core/widgets/icon_hide_password.dart';
 import '../../../../core/resources/manage_heights.dart';
 import '../../../../core/resources/manage_colors.dart';
@@ -18,7 +16,7 @@ class SignUpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ManageColors.white,
-
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(),
       body: GetX<SignUpGetX>(
         init: SignUpGetX.to,
@@ -26,18 +24,14 @@ class SignUpScreen extends StatelessWidget {
           return ListView(
             physics: const NeverScrollableScrollPhysics(),
             padding: const EdgeInsetsDirectional.only(
-              start: ManageWidth.w50,
-              end: ManageWidth.w50,
+              start: ManageWidths.w50,
+              end: ManageWidths.w50,
               top: ManageHeights.h40,
             ),
             children: [
               Text(
                 'sign_up'.tr.toUpperCase(),
-                style: const TextStyle(
-                  color: ManageColors.secondaryColor,
-                  fontWeight: ManageFontsWeights.w700,
-                  fontSize: ManageFontsSizes.s32,
-                ),
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               MyTextField(
                 top: ManageHeights.h44,

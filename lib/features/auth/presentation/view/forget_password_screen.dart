@@ -1,15 +1,12 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:new_shop/core/resources/manage_colors.dart';
-import 'package:new_shop/core/resources/manage_fonts_sizes.dart';
-import 'package:new_shop/core/resources/manage_fonts_weights.dart';
-import 'package:new_shop/core/widgets/my_button.dart';
-
 import '../../../../core/resources/manage_heights.dart';
+import '../../../../core/resources/manage_colors.dart';
 import '../../../../core/resources/manage_widths.dart';
 import '../../../../core/widgets/my_image_logo.dart';
 import '../../../../core/widgets/my_text_field.dart';
 import '../../controller/forget_password_getx.dart';
+import '../../../../core/widgets/my_button.dart';
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ForgetPasswordScreen extends StatelessWidget {
   const ForgetPasswordScreen({super.key});
@@ -18,16 +15,12 @@ class ForgetPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ManageColors.white,
-
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: ManageColors.c4,
         title: Text(
           'forgot_password'.tr.toUpperCase(),
-          style: const TextStyle(
-            color: ManageColors.secondaryColor,
-            fontWeight: ManageFontsWeights.w700,
-            fontSize: ManageFontsSizes.s18,
-          ),
+          style: Theme.of(context).textTheme.headlineLarge,
         ),
       ),
       body: GetBuilder<ForgetPasswordGetX>(
@@ -36,8 +29,8 @@ class ForgetPasswordScreen extends StatelessWidget {
           return ListView(
             physics: const NeverScrollableScrollPhysics(),
             padding: const EdgeInsetsDirectional.only(
-              start: ManageWidth.w50,
-              end: ManageWidth.w50,
+              start: ManageWidths.w50,
+              end: ManageWidths.w50,
               top: ManageHeights.h54,
             ),
             children: [
@@ -51,8 +44,8 @@ class ForgetPasswordScreen extends StatelessWidget {
               ),
               MyButton(
                 onPressed: controller.forgetPassword,
-                start: ManageWidth.w10,
-                end: ManageWidth.w10,
+                start: ManageWidths.w10,
+                end: ManageWidths.w10,
                 text: 'send'.tr,
               ),
             ],

@@ -1,8 +1,13 @@
 class ManageHeights {
   static const double infinity = double.infinity;
   static const double h1 = 1;
+  static const double h4 = 4;
+  static const double h8 = 8;
   static const double h6 = 6;
   static const double h10 = 10;
+  static const double h12 = 12;
+  static const double h13 = 13;
+  static const double h14 = 14;
   static const double h16 = 16;
   static const double h23 = 23;
   static const double h18 = 18;
@@ -17,8 +22,13 @@ class ManageHeights {
   static const double h74 = 74;
   static const double h78 = 78;
   static const double h90 = 90;
+  static const double h98 = 98;
   static const double h240 = 240;
   static const double h130 = 130;
+  static const double h100 = 100;
+  static const double h110 = 110;
+  static const double h148 = 148;
+  static const double h104 = 104;
   static const double h105 = 105;
   static const double h120 = 120;
 }

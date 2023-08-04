@@ -21,6 +21,7 @@ class OnboardingScreen extends StatelessWidget {
       init: OnboardingGetX.to,
       builder: (controller) {
         return Scaffold(
+          resizeToAvoidBottomInset: true,
           backgroundColor: ManageColors.white,
           appBar: AppBar(
             elevation: Constants.elevationAppBar,
@@ -39,8 +40,8 @@ class OnboardingScreen extends StatelessWidget {
           ),
           body: Padding(
             padding: const EdgeInsetsDirectional.only(
-              start: ManageWidth.w34,
-              end: ManageWidth.w34,
+              start: ManageWidths.w34,
+              end: ManageWidths.w34,
               bottom: ManageHeights.h34,
               top: ManageHeights.h18,
             ),
@@ -107,8 +108,8 @@ class OnboardingScreen extends StatelessWidget {
                     Get.offAllNamed(ManageRoutes.welcomeScreen);
                     //TODO: Create variable in Shared Preference to un-coming aging to on-boarding screen
                   },
-                  start: ManageWidth.w26,
-                  end: ManageWidth.w26,
+                  start: ManageWidths.w26,
+                  end: ManageWidths.w26,
                   text: 'start'.tr,
                   iconRow: Icons.arrow_forward,
                   isRow: true,

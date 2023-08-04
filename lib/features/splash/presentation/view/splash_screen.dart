@@ -12,6 +12,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SplashScreenGetX.to;
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       backgroundColor: ManageColors.white,
       body: Stack(
         alignment: AlignmentDirectional.center,

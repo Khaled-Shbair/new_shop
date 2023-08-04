@@ -29,6 +29,7 @@ flutter:
     - assets/images/splash/
     - assets/images/onboarding/
     - assets/images/auth/
+    - assets/images/home/
 
 
   # fonts:

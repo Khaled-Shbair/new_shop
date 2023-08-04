@@ -1,20 +1,14 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:get/get.dart';
-
-import '../../../../core/resources/manage_assets.dart';
-import '../../../../core/resources/manage_colors.dart';
-import '../../../../core/resources/manage_fonts_sizes.dart';
-import '../../../../core/resources/manage_fonts_weights.dart';
-import '../../../../core/resources/manage_heights.dart';
-import '../../../../core/resources/manage_routes.dart';
-import '../../../../core/resources/manage_widths.dart';
 import '../../../../core/widgets/icon_hide_password.dart';
-import '../../../../core/widgets/my_button.dart';
+import '../../../../core/resources/manage_heights.dart';
+import '../../../../core/resources/manage_colors.dart';
+import '../../../../core/resources/manage_routes.dart';
 import '../../../../core/widgets/my_image_logo.dart';
 import '../../../../core/widgets/my_text_field.dart';
+import '../../../../core/widgets/my_button.dart';
 import '../../controller/sign_in_getx.dart';
+import 'package:flutter/material.dart';
 import '../widgets/my_rich_text.dart';
+import 'package:get/get.dart';
 
 class SignInScreen extends StatelessWidget {
   const SignInScreen({super.key});
@@ -23,7 +17,7 @@ class SignInScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ManageColors.white,
-
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(),
       body: GetX<SignInGetX>(
         init: SignInGetX.to,
@@ -40,11 +34,7 @@ class SignInScreen extends StatelessWidget {
               const SizedBox(height: ManageHeights.h50),
               Text(
                 'sign_in'.tr.toUpperCase(),
-                style: const TextStyle(
-                  color: ManageColors.secondaryColor,
-                  fontWeight: ManageFontsWeights.w700,
-                  fontSize: ManageFontsSizes.s32,
-                ),
+                style: Theme.of(context).textTheme.headlineMedium,
               ),
               MyTextField(
                 keyboard: TextInputType.emailAddress,
@@ -81,11 +71,7 @@ class SignInScreen extends StatelessWidget {
                 ),
                 title: Text(
                   'remember_me'.tr,
-                  style: const TextStyle(
-                    color: ManageColors.secondaryColor,
-                    fontSize: ManageFontsSizes.s14,
-                    fontWeight: ManageFontsWeights.w400,
-                  ),
+                  style: Theme.of(context).textTheme.bodySmall,
                 ),
               ),
               TextButton(
@@ -98,11 +84,7 @@ class SignInScreen extends StatelessWidget {
                 },
                 child: Text(
                   'forgot_your_password'.tr,
-                  style: const TextStyle(
-                    color: ManageColors.primaryColor,
-                    fontSize: ManageFontsSizes.s14,
-                    fontWeight: ManageFontsWeights.w400,
-                  ),
+                  style: Theme.of(context).textTheme.bodyMedium,
                 ),
               ),
               MyButton(

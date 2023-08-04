@@ -1,12 +1,10 @@
-import 'package:new_shop/core/resources/manage_fonts_weights.dart';
-import 'package:new_shop/core/resources/manage_fonts_sizes.dart';
 import '../../../../core/resources/manage_heights.dart';
 import '../../../../core/resources/manage_assets.dart';
 import '../../../../core/resources/manage_colors.dart';
 import '../../../../core/resources/manage_routes.dart';
 import '../../../../core/resources/manage_widths.dart';
-import 'package:new_shop/core/widgets/my_button.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../core/widgets/my_image_logo.dart';
+import '../../../../core/widgets/my_button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -17,17 +15,18 @@ class WelcomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ManageColors.white,
+      resizeToAvoidBottomInset: true,
       body: Stack(
         alignment: AlignmentDirectional.center,
         children: [
           Image.asset(
             ManageAssets.welcomeBackground,
             fit: BoxFit.cover,
-            width: ManageWidth.infinity,
+            width: ManageWidths.infinity,
             filterQuality: FilterQuality.high,
           ),
           Container(
-            width: ManageWidth.infinity,
+            width: ManageWidths.infinity,
             height: ManageHeights.infinity,
             decoration: BoxDecoration(
               color: ManageColors.blackWithOpacity70,
@@ -36,29 +35,15 @@ class WelcomeScreen extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              SvgPicture.asset(
-                alignment: AlignmentDirectional.center,
-                ManageAssets.logoWelcome,
-                width: ManageWidth.w110,
-                height: ManageHeights.h130,
-              ),
+              const MyImageLogo(isWelcomeLogo: true),
               const SizedBox(height: ManageHeights.h120),
               Text(
                 'welcome_to'.tr.toUpperCase(),
-                style: const TextStyle(
-                  color: ManageColors.white,
-                  fontSize: ManageFontsSizes.s24,
-                  fontWeight: ManageFontsWeights.w400,
-                ),
+                style: Theme.of(context).textTheme.displayLarge,
               ),
               Text(
                 'new4shop'.tr.toUpperCase(),
-                style: const TextStyle(
-                  height: ManageHeights.h1,
-                  color: ManageColors.white,
-                  fontSize: ManageFontsSizes.s36,
-                  fontWeight: ManageFontsWeights.w700,
-                ),
+                style: Theme.of(context).textTheme.titleMedium,
               ),
               const SizedBox(height: ManageHeights.h120),
               MyButton(
