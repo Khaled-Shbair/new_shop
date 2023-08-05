@@ -13,6 +13,7 @@ class ManageHeights {
   static const double h18 = 18;
   static const double h20 = 20;
   static const double h30 = 30;
+  static const double h28 = 28;
   static const double h34 = 34;
   static const double h40 = 40;
   static const double h44 = 44;

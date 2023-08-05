@@ -12,17 +12,6 @@ class ManageTextStyle {
     fontSize: ManageFontsSizes.s18,
   );
 
-  //onboarding screens TextStyle
-  static TextStyle onboardingTitleTextStyle = const TextStyle(
-    fontSize: ManageFontsSizes.s26,
-    color: ManageColors.secondaryColor,
-    fontWeight: ManageFontsWeights.w700,
-  );
-  static TextStyle onboardingSubtitleTextStyle = const TextStyle(
-    fontSize: ManageFontsSizes.s18,
-    color: ManageColors.secondaryColor,
-    fontWeight: ManageFontsWeights.w400,
-  );
 
   //auth screens TextStyle
   static TextStyle richTextTextStyle = const TextStyle(

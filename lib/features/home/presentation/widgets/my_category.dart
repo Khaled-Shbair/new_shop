@@ -1,3 +1,5 @@
+import '../../../../core/resources/manage_fonts_weights.dart';
+import '../../../../core/resources/manage_fonts_sizes.dart';
 import '../../../../core/resources/manage_heights.dart';
 import '../../../../core/resources/manage_colors.dart';
 import '../../../../core/resources/manage_radius.dart';
@@ -36,8 +38,12 @@ class MyCategory extends StatelessWidget {
           const SizedBox(height: ManageHeights.h10),
           Text(
             text,
-            style: Theme.of(context).textTheme.labelSmall,
             overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              color: ManageColors.secondaryColor,
+              fontWeight: ManageFontsWeights.w700,
+              fontSize: ManageFontsSizes.s10,
+            ),
           ),
         ],
       ),

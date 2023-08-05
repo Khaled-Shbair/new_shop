@@ -10,8 +10,6 @@ class ManageTheme {
     scaffoldBackgroundColor: ManageColors.c4,
     textTheme: TextTheme(
       headlineLarge: ManageTextStyle.appBarTitleTextStyle,
-      titleLarge: ManageTextStyle.onboardingTitleTextStyle,
-      titleSmall: ManageTextStyle.onboardingSubtitleTextStyle,
       displayMedium: ManageTextStyle.richTextTextStyle,
       displaySmall: ManageTextStyle.richTextButtonTextStyle,
       displayLarge: ManageTextStyle.welcomeTextStyle,
