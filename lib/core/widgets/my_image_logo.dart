@@ -5,14 +5,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MyImageLogo extends StatelessWidget {
-  const MyImageLogo({super.key});
+  const MyImageLogo({
+    this.isWelcomeLogo = false,
+    super.key,
+  });
+
+  final bool isWelcomeLogo;
 
   @override
   Widget build(BuildContext context) {
-    return SvgPicture.asset(
-      ManageAssets.logoImage,
-      width: ManageWidth.w86,
-      height: ManageHeights.h105,
-    );
+    return isWelcomeLogo
+        ? SvgPicture.asset(
+            alignment: AlignmentDirectional.center,
+            ManageAssets.logoWelcome,
+            width: ManageWidths.w110,
+            height: ManageHeights.h130,
+          )
+        : SvgPicture.asset(
+            ManageAssets.logoImage,
+            width: ManageWidths.w86,
+            height: ManageHeights.h105,
+          );
   }
 }

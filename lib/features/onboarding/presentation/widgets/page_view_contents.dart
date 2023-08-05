@@ -1,7 +1,7 @@
-import '../../../../core/resources/manage_fonts_weights.dart';
-import '../../../../core/resources/manage_fonts_sizes.dart';
-import '../../../../core/resources/manage_heights.dart';
 import '../../../../core/resources/manage_colors.dart';
+import '../../../../core/resources/manage_fonts_sizes.dart';
+import '../../../../core/resources/manage_fonts_weights.dart';
+import '../../../../core/resources/manage_heights.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

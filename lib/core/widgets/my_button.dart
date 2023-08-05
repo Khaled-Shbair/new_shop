@@ -50,7 +50,7 @@ class MyButton extends StatelessWidget {
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
           backgroundColor: color,
-          minimumSize: const Size(ManageWidth.w260, ManageHeights.h50),
+          minimumSize: const Size(ManageWidths.w260, ManageHeights.h50),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(ManageRadius.r16),
           ),

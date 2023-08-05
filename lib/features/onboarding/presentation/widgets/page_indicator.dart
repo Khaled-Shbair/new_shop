@@ -14,7 +14,7 @@ class PageIndicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsetsDirectional.only(
-        end: ManageWidth.w12,
+        end: ManageWidths.w12,
       ),
       child: CircleAvatar(
         radius: ManageRadius.r4,
